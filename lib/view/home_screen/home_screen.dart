@@ -42,7 +42,20 @@ class HomeScreen extends StatelessWidget {
                           )),
                 ),
               ),
-              UserPostsWidget(),
+              // #2 custom post section
+              ListView.builder(
+                itemCount: DummyDb.homePostsList.length,
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) => UserPostsWidget(
+                  userName: DummyDb.homePostsList[index]["userName"].toString(),
+                  proPic: DummyDb.homePostsList[index]["proPic"].toString(),
+                  location: DummyDb.homePostsList[index]["location"].toString(),
+                  postImagesList: DummyDb.homePostsList[index]["posts"],
+                  caption: DummyDb.homePostsList[index]["caption"].toString(),
+                  isLiked: DummyDb.homePostsList[index]["liked"],
+                ),
+              )
             ],
           ),
         ));
