@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:instagram_ui/core/constants/color_constants.dart';
 
 class OutlinedCircleAvatar extends StatelessWidget {
-  const OutlinedCircleAvatar(
-      {super.key,
-      required this.radius,
-      this.backgroundImage,
-      this.child,
-      this.backgroundColor});
+  const OutlinedCircleAvatar({
+    super.key,
+    required this.radius,
+    this.backgroundImage,
+    this.child,
+    this.backgroundColor,
+  });
 
   final double radius;
   final ImageProvider<Object>? backgroundImage;
@@ -17,12 +18,15 @@ class OutlinedCircleAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(5),
-      decoration: BoxDecoration(
-          border: Border.all(color: ColorConstants.textFieldFill, width: 1.5),
-          borderRadius: BorderRadius.circular(radius + 10)),
-
-          child: CircleAvatar()
-    );
+        padding: const EdgeInsets.all(3),
+        decoration: BoxDecoration(
+          border: Border.all(color: ColorConstants.lightGrey, width: 1.5),
+          borderRadius: BorderRadius.circular(radius + 10),
+        ),
+        child: CircleAvatar(
+          radius: radius,
+          backgroundColor: backgroundColor,
+          backgroundImage: backgroundImage,
+        ));
   }
 }

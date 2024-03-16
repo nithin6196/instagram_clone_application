@@ -67,8 +67,8 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
                   decoration: BoxDecoration(
                       border: Border.all(
                           color: selectedIndex != 4
-                              ? ColorConstants.primaryBlack
-                              : Colors.transparent),
+                              ? Colors.transparent
+                              : ColorConstants.primaryBlack),
                       borderRadius: BorderRadius.circular(20)),
                   child: CircleAvatar(
                     backgroundImage: NetworkImage(

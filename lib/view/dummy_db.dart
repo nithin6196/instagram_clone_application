@@ -208,4 +208,18 @@ class DummyDb {
           "Journeying through life's gallery, savoring the art of every moment."
     }
   ];
+  static const List highlightsList = [
+    "https://images.pexels.com/photos/534164/pexels-photo-534164.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/707344/pexels-photo-707344.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/1820563/pexels-photo-1820563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/234272/pexels-photo-234272.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=600"
+  ];
+  static const List highlightTitleList = [
+    "Valley",
+    "Canyon",
+    "Highway",
+    "Mountain",
+    "Forest"
+  ];
 }

@@ -25,6 +25,7 @@ class _SearchScreenState extends State<SearchScreen> {
               child: Row(
                 children: [
                   Expanded(
+                      // #1 search field
                       child: TextField(
                     onTapOutside: (event) => FocusScope.of(context).unfocus(),
                     decoration: InputDecoration(
@@ -44,7 +45,8 @@ class _SearchScreenState extends State<SearchScreen> {
                             borderSide: BorderSide.none)),
                   )),
                   IconButton(
-                      onPressed: () {}, icon: Icon(Icons.select_all_sharp))
+                      onPressed: () {},
+                      icon: Icon(Icons.center_focus_strong_outlined))
                 ],
               ),
             ),
@@ -60,6 +62,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   children: List.generate(
                       10,
                       (index) => Padding(
+                            // search tabs
                             padding: const EdgeInsets.symmetric(horizontal: 5),
                             child: SearchCategoryCard(
                                 icon: index.isEven
@@ -70,6 +73,7 @@ class _SearchScreenState extends State<SearchScreen> {
               ),
             ),
             Expanded(
+                // search images
                 child: SingleChildScrollView(
                     child: Column(
               children: List.generate(

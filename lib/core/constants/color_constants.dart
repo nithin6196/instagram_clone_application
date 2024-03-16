@@ -5,6 +5,7 @@ class ColorConstants {
   static const primaryBlack = Color(0xff000000);
   static const primaryWhite = Color(0xffFFFFFF);
   static const accountTextColor = Color(0xff262626);
+  static const lightGrey = Colors.grey;
 
   //textfield colors
 
